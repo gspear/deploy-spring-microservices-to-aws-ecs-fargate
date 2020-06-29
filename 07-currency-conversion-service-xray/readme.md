@@ -54,7 +54,7 @@ public class CurrencyConversionController {
 ### Creating Containers
 
 - mvn package
-- docker run --publish 8100:8100 --network MY_BRIDGE --env CURRENCY_EXCHANGE_URI=http://currency-exchange-microservice:8000 in28min/aws-currency-conversion-service-xray:0.0.1-SNAPSHOT
+- docker run --publish 8100:8100 --network MY_BRIDGE --env CURRENCY_EXCHANGE_URI=http://currency-exchange-microservice:8000 gspear/aws-currency-conversion-service-xray:0.0.1-SNAPSHOT
 
 
 

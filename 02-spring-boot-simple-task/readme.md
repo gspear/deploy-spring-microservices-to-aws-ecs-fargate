@@ -7,7 +7,7 @@ Runs `TaskImpl.performTask()` at launch
 ### Creating Containers
 
 - mvn clean package
-- docker run in28min/aws-simple-spring-task:0.0.1-SNAPSHOT
+- docker run gspear/aws-simple-spring-task:0.0.1-SNAPSHOT
 
 ```
 docker login

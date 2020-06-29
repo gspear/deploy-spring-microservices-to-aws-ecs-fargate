@@ -18,7 +18,7 @@ Run CurrencyConversionServiceApplication as a Java Application.
 ### Running Containers
 
 ```
-docker run --publish 8100:8100 --network currency-network --env CURRENCY_EXCHANGE_URI=http://currency-exchange-service:8000 in28min/aws-currency-conversion-service:0.0.1-SNAPSHOT
+docker run --publish 8100:8100 --network currency-network --env CURRENCY_EXCHANGE_URI=http://currency-exchange-service:8000 gspear/aws-currency-conversion-service:0.0.1-SNAPSHOT
 ```
 
 #### Test API 

@@ -1,6 +1,6 @@
 # Currency Exchange Micro Service - H2 with XRay
 
-Run com.in28minutes.microservices.currencyconversionservice.CurrencyConversionServiceApplicationH2 as a Java Application.
+Run com.gspearutes.microservices.currencyconversionservice.CurrencyConversionServiceApplicationH2 as a Java Application.
 
 
 ## Changes from H2 Application
@@ -33,7 +33,7 @@ public class CurrencyExchangeController {
 ### Running Containers
 
 - mvn package
-- docker run --publish 8000:8000 --network MY_BRIDGE --name currency-exchange-microservice in28min/aws-currency-exchange-service-h2-xray:0.0.1-SNAPSHOT
+- docker run --publish 8000:8000 --network MY_BRIDGE --name currency-exchange-microservice gspear/aws-currency-exchange-service-h2-xray:0.0.1-SNAPSHOT
 
 Test API 
 - http://localhost:8000/api/currency-exchange-microservice/currency-exchange/from/USD/to/INR
