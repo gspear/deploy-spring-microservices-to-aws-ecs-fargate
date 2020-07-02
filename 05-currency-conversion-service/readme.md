@@ -18,14 +18,23 @@ Run CurrencyConversionServiceApplication as a Java Application.
 ### Running Containers
 
 ```
-docker run --publish 8100:8100 --network currency-network --env CURRENCY_EXCHANGE_URI=http://currency-exchange-service:8000 gspear/aws-currency-conversion-service:0.0.1-SNAPSHOT
+docker network create currency-network
+For any container already running, add them to the network
+docker network connect currency-network <container-id>
+For any image that needs to be run i.e. container not already created - docker run --network option
+docker run --detach --publish 3306:3306 --network currency-network --name mysql --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=exchange-db-user --env MYSQL_PASSWORD=dummyexchange --env MYSQL_DATABASE=exchange-db --name mysql  mysql:5.7
+docker run --detach --publish 8000:8000 --network currency-network --name currency-exchange-microservice  --env RDS_HOSTNAME=mysql gspear/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT
+docker run --detach --publish 8100:8100 --network currency-network --name currency-conversion-microservice --env CURRENCY_EXCHANGE_URI=http://currency-exchange-microservice:8000 gspear/aws-currency-conversion-service:0.0.1-SNAPSHOT
 ```
-
+```
+Running with docker-compose
+docker-compose-up will run the yaml that will create the three containers and their dependencies.
+```
 #### Test API 
 - http://localhost:8100/api/currency-conversion-microservice/currency-converter/from/EUR/to/INR/quantity/10
 ```
 docker login
-docker push @@@REPO_NAME@@@/aws-currency-conversion-service:0.0.1-SNAPSHOT
+docker push gspear/aws-currency-conversion-service:0.0.1-SNAPSHOT
 ```
 
 

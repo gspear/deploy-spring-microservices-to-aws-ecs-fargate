@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: dummypassword
+      MYSQL_DATABASE: exchange-db
+      MYSQL_USER: exchange-db-user
+      MYSQL_PASSWORD: dummyexchange
+
+  currency-exchange:
+    image: "gspear/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT"
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+    environment:
+      RDS_HOSTNAME: db
+
+  currency-conversion:
+    image: "gspear/aws-currency-conversion-service:0.0.1-SNAPSHOT"
+    restart: always
+    depends_on:
+      - currency-exchange
+    ports:
+      - 8100:8100
+    environment:
+      CURRENCY_EXCHANGE_URI: http://currency-exchange:8000
