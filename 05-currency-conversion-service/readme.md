@@ -28,7 +28,7 @@ docker run --detach --publish 8100:8100 --network currency-network --name curren
 ```
 ```
 Running with docker-compose
-docker-compose-up will run the yaml that will create the three containers and their dependencies.
+docker-compose-up will run the yaml that will create the three containers
 ```
 #### Test API 
 - http://localhost:8100/api/currency-conversion-microservice/currency-converter/from/EUR/to/INR/quantity/10
