@@ -1,6 +1,6 @@
 # Currency Exchange Micro Service - Mysql
 
-Run com.gspearutes.microservices.currencyconversionservice.CurrencyConversionServiceApplicationMySql as a Java Application.
+Run com.gspear.microservices.currencyconversionservice.CurrencyConversionServiceApplicationMySql as a Java Application.
 
 Application uses h2 database to run the tests.
 
@@ -103,7 +103,7 @@ Fetching table and column names from `todos` for auto-completion... Press ^C to 
 +----+--------------+---------+----------------------------+-------------+
 | id | description  | is_done | target_date                | user        |
 +----+--------------+---------+----------------------------+-------------+
-|  1 | Default Desc | 0       | 2019-06-26 18:30:00.000000 | gspearutes |
+|  1 | Default Desc | 0       | 2019-06-26 18:30:00.000000 | gspear |
 +----+--------------+---------+----------------------------+-------------+
 1 row in set (0.0032 sec)
 
@@ -128,7 +128,7 @@ Test API
 
 ```
 docker login
-docker push @@@REPO_NAME@@@/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT
+docker push gspear/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT
 ```
 
 ## Environment Variables

@@ -1,6 +1,6 @@
 # Currency Exchange Micro Service - H2
 
-Run com.gspearutes.microservices.currencyconversionservice.CurrencyConversionServiceApplicationH2 as a Java Application.
+Run com.gspear.microservices.currencyconversionservice.CurrencyConversionServiceApplicationH2 as a Java Application.
 
 ## Containerization
 
@@ -31,7 +31,7 @@ Test API
 
 ```
 docker login
-docker push @@@REPO_NAME@@@/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT
+docker push gspear/aws-currency-exchange-service-h2:0.0.1-SNAPSHOT
 ```
 
 ## Resources

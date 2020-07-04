@@ -28,8 +28,8 @@ Hello World
 {"message":"Hello World - Changed"}
 ```
 
-- http://localhost:8200/hello-world/path-variable/gspearutes
+- http://localhost:8200/hello-world/path-variable/gspear
 
 ```json
-{"message":"Hello World, gspearutes"}
+{"message":"Hello World, gspear"}
 ```

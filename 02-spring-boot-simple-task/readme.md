@@ -11,5 +11,5 @@ Runs `TaskImpl.performTask()` at launch
 
 ```
 docker login
-docker push @@REPO@@/aws-simple-spring-task:0.0.1-SNAPSHOT
+docker push gspear/aws-simple-spring-task:0.0.1-SNAPSHOT
 ```
