@@ -8,7 +8,6 @@ services:
       MYSQL_DATABASE: exchange-db
       MYSQL_USER: exchange-db-user
       MYSQL_PASSWORD: dummyexchange
-
   currency-exchange:
     image: "gspear/aws-currency-exchange-service-mysql:0.0.1-SNAPSHOT"
     restart: always
